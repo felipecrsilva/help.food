@@ -1,29 +1,76 @@
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: calc(100% - 20rem);
+  height: 5rem;
+
+  margin: 14px auto;
+
+  nav {
+    a {
+      color: var(--subtitle-color);
+      text-decoration: none;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    a + a {
+      margin-left: 2.25rem;
+    }
+
+    a:hover {
+      color: var(--primary-color);
+      }
+  }
+
+  .buttons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 18px;
 
-    width: calc(100% - 20rem);
-    height: 5rem;
+    .buttonNotFilled {
+      width: 11.25rem;
+      height: 60px;
 
-    margin: 14px auto;
-
-    nav {
-        a {
-            color: var(--subtitle-color);
-            text-decoration: none;
-            font-size: 1.25rem;
-            line-height: 1.75rem;
-            transition: .2s;
-            cursor: pointer;
-        }
-
-        a + a {
-            margin-left: 2.25rem;
-        }
-
-        a:hover {
-            color: var(--primary-color);
-        }
+      color: var(--subtitle-color);
+      font-weight: bold;
+        
+      background: transparent;
+    
+      border: 2.5px solid var(--inputs-border);
+      border-radius: .5rem;
+    
+      transition: filter .2s;
+      cursor: pointer;
+    
+      &:hover {
+          filter: brightness(90%);
+      }
     }
+
+    .buttonFilled {
+      width: 11.25rem;
+      height: 60px;
+
+      color: #F0F0F5;
+      font-weight: bold;
+        
+      background: var(--primary-color);
+
+      border: 0;
+      border-radius: .5rem;
+
+      transition: filter .2s;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+  }
 }
