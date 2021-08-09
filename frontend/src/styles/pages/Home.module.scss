@@ -10,9 +10,10 @@
   main {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    margin: 0 10rem;
+    width: 100vw;
+    padding: 0 10rem;
 
     section {
       display: flex;
