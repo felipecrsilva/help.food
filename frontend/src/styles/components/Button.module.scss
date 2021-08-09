@@ -1,0 +1,18 @@
+.button {
+  height: 3.75rem;
+
+  color: #F0F0F5;
+  font-weight: bold;
+
+  background: var(--primary-color);
+
+  border: none;
+  border-radius: .5rem;
+
+  transition: filter .2s;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
