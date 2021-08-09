@@ -1,14 +1,23 @@
 import Head from "next/head";
-import { FormEvent } from "react";
+import { useState, FormEvent } from "react";
 
 import Header from "../components/Header";
 import Button from "../components/Button";
 
 import styles from "../styles/pages/Login.module.scss";
 
+type User = {
+  email: string;
+  password: string;
+}
+
 export default function Login() {
+  const [user, setUser] = useState({} as User | null)
+
   function handleSubmit(e : FormEvent) {
     e.preventDefault()
+
+    
   }
 
   return (
@@ -21,8 +30,18 @@ export default function Login() {
       <main>
         <form onSubmit={handleSubmit}>
           <h1>Faça seu login</h1>
-          <input type="text" placeholder="Seu email" />
-          <input type="password" placeholder="Sua senha" />
+          <input 
+            type="email" 
+            placeholder="Seu email"
+            value={user.email}
+            onChange={e => setUser({ ...user, email: e.target.value })}
+          />
+          <input 
+            type="password" 
+            placeholder="Sua senha" 
+            value={user.password} 
+            onChange={e => setUser({ ...user, password: e.target.value })}
+          />
           <Button>Entrar</Button>
         </form>
         <img src="/cooking.svg" alt="Cooking Image" />
