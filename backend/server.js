@@ -1,11 +1,6 @@
-const express = require('express')
-const app = express()
+import app from './app';
 
-app.get('/', (req, res) => {
-    res.json({ "msg": "Rota Inicial" })
-})
-
-const PORT = 3333
-app.listen(PORT, () => {
-    console.log(`🚀 Server is runing in http://localhost:${PORT}`)
-})
+const portExpress = 3333;
+app.listen(portExpress, () => {
+  console.log(`🚀 Backend API started in port ${portExpress}`);
+});
