@@ -12,12 +12,19 @@ type User = {
 }
 
 export default function Login() {
-  const [user, setUser] = useState({} as User | null)
+  const [user, setUser] = useState<User>({
+    email: "",
+    password: ""
+  })
 
   function handleSubmit(e : FormEvent) {
     e.preventDefault()
 
-    
+    try {
+      console.log(user)
+    } catch (err) {
+      alert('Erro! Falha no login, tente novamente.')
+    }
   }
 
   return (
