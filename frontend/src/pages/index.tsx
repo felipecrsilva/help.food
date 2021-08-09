@@ -1,8 +1,9 @@
-import Head from 'next/head';
+import Head from "next/head";
 
-import Header from '../components/Header';
+import { FiArrowRight } from "react-icons/fi";
+import Header from "../components/Header";
 
-import styles from '../styles/pages/Home.module.scss';
+import styles from "../styles/pages/Home.module.scss";
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
           </p>
           <button>
             Criar receita
-            <img src="/icons/arrow-right.svg" alt="Criar receita" />
+            <FiArrowRight fontSize={24} />
           </button>
         </section>
         <img src="/tasting.svg" alt="Imagem principal" />
