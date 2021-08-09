@@ -1,5 +1,7 @@
 import Head from 'next/head';
+
 import Header from '../components/Header';
+
 import styles from '../styles/pages/Home.module.scss';
 
 export default function Home() {
@@ -11,6 +13,19 @@ export default function Home() {
       </Head>
 
       <Header />
+      <main>
+        <section>
+          <h2>Precisa de ajuda com comida?</h2>
+          <p>
+            Help.food é uma aplicação para pesquisar e compartilhar receitas com o mundo todo. Preparado para embarcar nessa viagem?
+          </p>
+          <button>
+            Criar receita
+            <img src="/icons/arrow-right.svg" alt="Criar receita" />
+          </button>
+        </section>
+        <img src="/tasting.svg" alt="Imagem principal" />
+      </main>
     </div>
   )
 }

@@ -6,4 +6,59 @@
   height: 100vh;
 
   background-color: var(--background);
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 10rem;
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      h1 {
+        font-size: 2rem;
+        color: var(--title-color);
+      }
+
+      p {
+        max-width: 24rem;
+        font-size: 18px;
+        color: var(--text-color);
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 11.25rem;
+        height: 60px;
+
+        gap: 14px;
+
+        color: #F0F0F5;
+        font-weight: bold;
+          
+        background: var(--primary-color);
+
+        border: 0;
+        border-radius: .5rem;
+
+        transition: filter .2s;
+        cursor: pointer;
+
+        img {
+          stroke: #F0F0F5;
+        }
+
+        &:hover {
+          filter: brightness(90%);
+        }
+      }
+    }
+  }
 }
